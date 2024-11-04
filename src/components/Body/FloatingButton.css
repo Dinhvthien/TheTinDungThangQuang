@@ -1,0 +1,147 @@
+:root {
+  --pink: #f50057; /* Màu hồng */
+  --animation-curve: cubic-bezier(0.12, 0.7, 0.74, 0.71); /* Đường cong animation */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-icon {
+  fill: white;
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+  animation: shake 0.8s infinite; /* Shake animation */
+}
+
+.phone {
+  z-index: 2;
+  background-color: var(--pink);
+  animation: phone 1s var(--animation-curve) infinite alternate-reverse; /* Animation cho nút */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px white solid;
+  width: 45px; /* Kích thước nút nhỏ hơn */
+  height: 45px; /* Kích thước nút nhỏ hơn */
+  border-radius: 50%; /* Tạo hình tròn */
+  position: relative; /* Để định vị vòng tròn */
+}
+
+.zalo {
+  z-index: 2;
+  background-color: #c7c8e2; /* Adjust color as necessary */
+  animation: zalo 1s var(--animation-curve) infinite alternate-reverse; /* Animation for Zalo button */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px white solid;
+  width: 45px; /* Adjust as necessary */
+  height: 45px; /* Adjust as necessary */
+  border-radius: 50%; /* Create a round shape */
+  position: relative; /* Positioning for circles */
+}
+
+.zalo-icon {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  animation: shake 0.8s infinite; /* Shake animation for Zalo icon */
+  border-radius:40%; 
+  z-index: 1000;
+}
+
+.circle1, .circle2, .circle3, .circle4 {
+  height: 40px; /* Kích thước vòng tròn nhỏ hơn */
+  width: 40px; /* Kích thước vòng tròn nhỏ hơn */
+  border-radius: 50%;
+  background-color: red; /* Màu của vòng tròn */
+  position: absolute;
+  animation: scaling 2s var(--animation-curve) infinite; /* Hiệu ứng nhấp nháy */
+  top: 15%; /* Đặt vị trí bên trên cho vòng tròn */
+  left: 50%; /* Đặt vị trí bên trái cho vòng tròn */
+  transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa */
+}
+
+.circle3, .circle4 {
+  height: 40px; /* Kích thước vòng tròn nhỏ hơn */
+  width: 40px; /* Kích thước vòng tròn nhỏ hơn */
+  border-radius: 50%;
+  background-color: blue; /* Màu khác cho vòng tròn của Zalo */
+  position: absolute;
+  animation: new 2s var(--animation-curve) infinite; /* Hiệu ứng nhấp nháy */
+  top: 85%; /* Đặt vị trí bên trên cho vòng tròn */
+  left: 50%; /* Đặt vị trí bên trái cho vòng tròn */
+  transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa */
+}
+
+@keyframes scaling {
+  0% {
+      transform: translate(-50%, -50%) scale(1); /* Kích thước ban đầu nhỏ hơn */
+      background-color: var(--pink);
+  }
+  100% {
+      transform: translate(-50%, -50%) scale(3); /* Kích thước lớn nhất nhỏ hơn */
+      background-color: rgba(245, 0, 182, 0); /* Màu nhạt dần */
+  }
+}
+
+@keyframes new {
+  0% {
+      transform: translate(-50%, -50%) scale(1); /* Kích thước ban đầu nhỏ hơn */
+      background-color: #014ff7;
+  }
+  100% {
+      transform: translate(-50%, -50%) scale(3); /* Kích thước lớn nhất nhỏ hơn */
+      background-color: rgba(245, 0, 182, 0); /* Màu nhạt dần */
+  }
+}
+
+@keyframes phone {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.05); /* Tăng kích thước nút nhỏ hơn */
+  }
+}
+
+@keyframes zalo {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.05); /* Tăng kích thước nút nhỏ hơn cho Zalo */
+  }
+}
+
+.circle1 {
+  animation-delay: 0s; /* Thời gian delay cho vòng tròn 1 */
+}
+
+.circle2 {
+  animation-delay: 1s; /* Thời gian delay cho vòng tròn 2 */
+}
+
+.circle3 {
+  animation-delay: 0s; /* Thời gian delay cho vòng tròn 3 */
+}
+
+.circle4 {
+  animation-delay: 1s; /* Thời gian delay cho vòng tròn 4 */
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
