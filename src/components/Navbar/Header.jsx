@@ -11,7 +11,9 @@ export const Header = () => {
         </div>
         <nav className="flex items-center">
           <button className="text-white py-2 px-4 rounded-lg bg-green-700 hover:bg-green-800 font-bold">
-            <h1>HOTLINE: 0879203999</h1>
+          <h1> <a  href="tel:+84879203999">
+             HOTLINE: 0879203999
+          </a></h1>
           </button>
         </nav>
       </div>

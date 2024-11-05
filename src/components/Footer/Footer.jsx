@@ -15,7 +15,7 @@ export const Footer = () => {
                   alt="FlowBite Logo"
                 />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  Flowbite
+                  Thăng Quang Credit
                 </span>
               </a>
             </div>
@@ -41,14 +41,6 @@ export const Footer = () => {
                       Facebook: Quang Thăng
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100032589079166"
-                      className="hover:underline text-lg"
-                    >
-                      Facebook: Quang Thăng
-                    </a>
-                  </li>
                 </ul>
               </div>
               <div>
@@ -57,7 +49,7 @@ export const Footer = () => {
                 </h2>
                 <ul className="text-gray-600 dark:text-gray-400 font-semibold">
                   <li className="mb-6">
-                    <h1>Thành phố Ninh Bình địa chỉ ở đâu không biết</h1>
+                    <h1>CS1: 2 Lý Nhân Tông, Phố Ngọc Mỹ, Ninh Bình</h1>
                   </li>
                 </ul>
               </div>
